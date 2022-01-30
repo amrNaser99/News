@@ -1,8 +1,6 @@
-# new_app
+# news
 
-A News Flutter App.
-
-# Developed by eng.Amr Nasser
+A new News Flutter project.
 
 ## Getting Started
 

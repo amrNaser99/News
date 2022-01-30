@@ -1,6 +1,6 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
-import 'package:new_app/modules/web_view/web_view.dart';
+import 'package:news/modules/web_view/web_view.dart';
 
 Widget buildArticlesItem(article,context){
   return InkWell(

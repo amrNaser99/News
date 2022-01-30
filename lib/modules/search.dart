@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:new_app/shared/components/components.dart';
-import 'package:new_app/shared/cubit/news_cubit/news_cubit.dart';
-import 'package:new_app/shared/cubit/news_cubit/news_states.dart';
+import 'package:news/shared/components/components.dart';
+import 'package:news/shared/cubit/news_cubit/news_cubit.dart';
+import 'package:news/shared/cubit/news_cubit/news_states.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -21,15 +21,15 @@ class SearchScreen extends StatelessWidget {
             padding: const EdgeInsets.all(20.0),
             child: Column(
               children: [
-                TextFormField(controller: searchController,
+                TextFormField(
+                  controller: searchController,
                   keyboardType: TextInputType.text,
-                  decoration:  InputDecoration(
+                  decoration: InputDecoration(
                     labelText: 'Search',
-
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0)),
                     prefixIcon: const Icon(Icons.search),
                   ),
-
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Field must be not Empty';
@@ -38,9 +38,7 @@ class SearchScreen extends StatelessWidget {
                     }
                   },
                   onChanged: (value) {
-
                     NewsCubit.get(context).getSearch(value);
-
                   },
                 ),
                 Expanded(

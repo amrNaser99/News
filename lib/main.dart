@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:new_app/layouts/news_layout.dart';
-import 'package:new_app/shared/bloc_observer.dart';
-import 'package:new_app/shared/cubit/app_cubit/app_cubit.dart';
-import 'package:new_app/shared/cubit/app_cubit/app_states.dart';
-import 'package:new_app/shared/cubit/news_cubit/news_cubit.dart';
-import 'package:new_app/shared/network/local/cache_helper.dart';
-import 'package:new_app/shared/network/remote/dio_helper.dart';
-import 'package:new_app/shared/styles/themes.dart';
+import 'layouts/news_layout.dart';
+import 'shared/bloc_observer.dart';
+import 'shared/cubit/app_cubit/app_cubit.dart';
+import 'shared/cubit/app_cubit/app_states.dart';
+import 'shared/cubit/news_cubit/news_cubit.dart';
+import 'shared/network/local/cache_helper.dart';
+import 'shared/network/remote/dio_helper.dart';
+import 'shared/styles/themes.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   DioHelper.init();
   await CacheHelper.init();
+
+  // await DesktopWindow.setMinWindowSize(const Size(800,400));
+
   // late bool? isDark = false ;
   // isDark = CacheHelper.getBoolean(key: 'isDark');
 

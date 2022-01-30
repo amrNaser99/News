@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hexcolor/hexcolor.dart';
 
- ThemeData lighTheme = ThemeData(
+ThemeData lighTheme = ThemeData(
   primarySwatch: Colors.deepOrange,
   primaryColor: Colors.deepOrange,
   scaffoldBackgroundColor: Colors.white,
@@ -32,44 +32,41 @@ import 'package:hexcolor/hexcolor.dart';
   ),
   textTheme: const TextTheme(
     bodyText1: TextStyle(
-        fontSize: 20.0,
-        fontWeight: FontWeight.w600,
-        color: Colors.black),
+        fontSize: 20.0, fontWeight: FontWeight.w600, color: Colors.black),
   ),
 );
 
- ThemeData darkTheme = ThemeData(
-   primarySwatch: Colors.deepOrange,
-   primaryColor: Colors.deepOrange,
-   appBarTheme: AppBarTheme(
-     titleSpacing: 20.0,
-     elevation: 0.0,
-     backgroundColor: HexColor('333739'),
-     iconTheme: const IconThemeData(
-       color: Colors.white,
-     ),
-     titleTextStyle: const TextStyle(
-       color: Colors.white,
-       fontSize: 25.0,
-       fontWeight: FontWeight.bold,
-     ),
-     systemOverlayStyle: SystemUiOverlayStyle(
-       statusBarColor: HexColor('333739'),
-       statusBarIconBrightness: Brightness.light,
-     ),
-   ),
-   bottomNavigationBarTheme: BottomNavigationBarThemeData(
-     type: BottomNavigationBarType.fixed,
-     elevation: 20.0,
-     selectedItemColor: Colors.deepOrange,
-     unselectedItemColor: Colors.grey,
-     backgroundColor: HexColor('333739'),
-   ),
-   scaffoldBackgroundColor: HexColor('333739'),
-   textTheme: const TextTheme(
-     bodyText1: TextStyle(
-         fontSize: 20.0,
-         fontWeight: FontWeight.w600,
-         color: Colors.white),
-   ),
- );
+ThemeData darkTheme = ThemeData(
+  primarySwatch: Colors.deepOrange,
+  primaryColor: Colors.deepOrange,
+  appBarTheme: AppBarTheme(
+    titleSpacing: 20.0,
+    elevation: 0.0,
+    backgroundColor: HexColor('333739'),
+    iconTheme: const IconThemeData(
+      color: Colors.white,
+    ),
+    titleTextStyle: const TextStyle(
+      color: Colors.white,
+      fontSize: 25.0,
+      fontWeight: FontWeight.bold,
+    ),
+    systemOverlayStyle: SystemUiOverlayStyle(
+      statusBarColor: HexColor('333739'),
+      statusBarIconBrightness: Brightness.light,
+    ),
+  ),
+  hintColor: Colors.white,
+  bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    type: BottomNavigationBarType.fixed,
+    elevation: 20.0,
+    selectedItemColor: Colors.deepOrange,
+    unselectedItemColor: Colors.grey,
+    backgroundColor: HexColor('333739'),
+  ),
+  scaffoldBackgroundColor: HexColor('333739'),
+  textTheme: const TextTheme(
+    bodyText1: TextStyle(
+        fontSize: 20.0, fontWeight: FontWeight.w600, color: Colors.white),
+  ),
+);
