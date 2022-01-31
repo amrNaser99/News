@@ -157,13 +157,15 @@ class NewsCubit extends Cubit<NewsStates> {
 
 
   List<dynamic> search = [];
+  String? searchValue ;
 
   void getSearch(String value) {
     emit(NewsSearchLoadingState());
+    value = value ;
     DioHelper.getData(
         url: 'v2/everything',
         query: {
-          'q': '$value',
+          'q': value,
           'apiKey': '978166dc49544441ae0cb71698cc8637',
         })
         .then((value) {

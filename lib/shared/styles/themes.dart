@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:news/shared/styles/colors.dart';
 
 ThemeData lighTheme = ThemeData(
   primarySwatch: Colors.deepOrange,
@@ -33,6 +34,8 @@ ThemeData lighTheme = ThemeData(
   textTheme: const TextTheme(
     bodyText1: TextStyle(
         fontSize: 20.0, fontWeight: FontWeight.w600, color: Colors.black),
+    bodyText2: TextStyle(
+        fontSize: 16.0, fontWeight: FontWeight.normal, color: primaryColor),
   ),
 );
 
@@ -56,7 +59,6 @@ ThemeData darkTheme = ThemeData(
       statusBarIconBrightness: Brightness.light,
     ),
   ),
-  hintColor: Colors.white,
   bottomNavigationBarTheme: BottomNavigationBarThemeData(
     type: BottomNavigationBarType.fixed,
     elevation: 20.0,
@@ -67,6 +69,14 @@ ThemeData darkTheme = ThemeData(
   scaffoldBackgroundColor: HexColor('333739'),
   textTheme: const TextTheme(
     bodyText1: TextStyle(
-        fontSize: 20.0, fontWeight: FontWeight.w600, color: Colors.white),
+      fontSize: 20.0,
+      fontWeight: FontWeight.w600,
+      color: Colors.white,
+    ),
+    bodyText2: TextStyle(
+      fontSize: 16.0,
+      fontWeight: FontWeight.normal,
+      color: Colors.white,
+    ),
   ),
 );

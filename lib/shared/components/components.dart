@@ -1,6 +1,7 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
 import 'package:news/modules/web_view/web_view.dart';
+import 'package:news/shared/styles/colors.dart';
 
 Widget buildArticlesItem(article,context){
   return InkWell(
@@ -114,6 +115,7 @@ Widget defaultButton({
     );
 
 Widget defaultTextFormField({
+  required BuildContext context,
   required TextEditingController controller,
   required TextInputType keyboardType,
   required String labelText,
@@ -122,6 +124,7 @@ Widget defaultTextFormField({
   IconData? suffixIcon,
   void Function(String)? onSubmitted,
   void Function(String)? onChanged,
+  TextStyle? labelStyle,
   void Function()? onTap,
   bool isPassword = false,
   double radius = 10.0,
@@ -132,6 +135,8 @@ Widget defaultTextFormField({
       obscureText: isPassword,
       decoration: InputDecoration(
         labelText: labelText,
+        labelStyle: labelStyle,
+        fillColor: primaryColor,
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(radius)),
         prefixIcon: Icon(prefixIcon),
         suffixIcon: suffixIcon != null ? Icon(suffixIcon) : null,

@@ -13,6 +13,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   DioHelper.init();
+
   await CacheHelper.init();
 
   // await DesktopWindow.setMinWindowSize(const Size(800,400));
