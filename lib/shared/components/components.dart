@@ -1,5 +1,7 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_file.dart';
+import 'package:intl/intl.dart';
 import 'package:news/modules/web_view/web_view.dart';
 import 'package:news/shared/styles/colors.dart';
 
@@ -44,7 +46,8 @@ Widget buildArticlesItem(article,context){
 
                   ),
                   Text(
-                    '${article['publishedAt']}',
+                    '${DateFormat.yMMMMEEEEd(article['publishedAt'])}',
+                    // '${ article['publishedAt']}',
 
                     style: const TextStyle(
                       color: Colors.grey,
@@ -146,43 +149,3 @@ Widget defaultTextFormField({
       validator: validate,
       onFieldSubmitted: onSubmitted,
     );
-
-Widget taskBuilder({
-  required List<Map> tasks ,
-}) => ConditionalBuilder(
-  condition: tasks.length > 0,
-  builder: (context) => ListView.separated(
-      itemBuilder: (context,index) =>
-          buildArticlesItem(tasks[index],context),
-      separatorBuilder: (context,index) => Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 20.0,
-        ),
-        child: Container(
-          width: double.infinity,
-          height: 1.0,
-          color: Colors.grey[300],
-        ),
-      ),
-      itemCount: tasks.length),
-  fallback: (context) => Center(
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: const [
-        Icon(
-          Icons.menu,
-          size: 100.0,
-          color: Colors.grey,
-        ),
-        Text(
-          'No Tasks Yet, Please Insert Some Tasks',
-          style: TextStyle(
-            fontSize: 16.0,
-            fontWeight: FontWeight.bold,
-            color: Colors.grey,
-          ),
-        )
-      ],
-    ),
-  ),
-);
