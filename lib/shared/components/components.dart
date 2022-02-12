@@ -47,7 +47,6 @@ Widget buildArticlesItem(article,context){
                   ),
                   Text(
                     '${DateFormat.yMMMMEEEEd(article['publishedAt'])}',
-                    // '${ article['publishedAt']}',
 
                     style: const TextStyle(
                       color: Colors.grey,
